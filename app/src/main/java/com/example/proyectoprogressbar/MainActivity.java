@@ -17,17 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        // Crear un Handler y usar postDelayed para retrasar la visibilidad del ProgressBar
         Handler handler = new Handler();
         progressBar.setVisibility(ProgressBar.VISIBLE);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //progressBar.setVisibility(ProgressBar.VISIBLE);
-                // Llamar a la clase HomeActivity usando un Intent
                 Intent intent = new Intent(MainActivity.this, Login.class);
                 startActivity(intent);
-                // Finalizar esta actividad para que no se pueda volver atrás a ella
                 finish();
             }
         }, 2500); // 1500 milisegundos = 1.5 segundos

@@ -1,4 +1,3 @@
-// java/com/example/proyectoprogressbar/Login.java
 package com.example.proyectoprogressbar;
 
 import android.content.Intent;
@@ -12,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
 
-    // Arrays de ejemplo
-    String[] users = {"user1", "user2", "user3"};
-    String[] passwords = {"pass1", "pass2", "pass3"};
+    String[] users = {"8-985-772", "8-968-248", "13-25-542"};
+    String[] passwords = {"Holamartin", "Holapaola", "hot123"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +30,11 @@ public class Login extends AppCompatActivity {
                 String password = passwordEditText.getText().toString();
 
                 if (validateLogin(username, password)) {
-                    // Login exitoso
-                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    // Lanzar actividad Estudiante
+                    Toast.makeText(Login.this, "Inicio de Sesión Exitoso", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, ECONOMICO.class);
                     startActivity(intent);
                 } else {
-                    // Login fallido
-                    Toast.makeText(Login.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Contraseña Incorrecta o Cédula", Toast.LENGTH_SHORT).show();
                 }
             }
         });
