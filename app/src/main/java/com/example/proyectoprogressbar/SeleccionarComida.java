@@ -43,7 +43,7 @@ public class SeleccionarComida extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int total = calculateTotal();
-                textResult.setText("Result: " + total);
+                textResult.setText("Total: " + total);
             }
         });
     }

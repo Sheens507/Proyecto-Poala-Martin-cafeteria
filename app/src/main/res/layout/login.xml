@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- res/layout/login.xml -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#240A34"
     tools:context=".Login">
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_margin="16dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/Button"
-        android:text="Login" />
-
     <EditText
         android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_width="328dp"
+        android:layout_height="43dp"
         android:hint="Username"
         android:inputType="text"
-        android:textColorHint="#E9BD6C" />
+        android:textColorHint="#E9BD6C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/username"
-        android:layout_margin="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="341dp"
+        android:layout_height="43dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="#E9BD6C" />
+        android:textColorHint="#E9BD6C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.332" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="271dp"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/Button"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginBottom="32dp"
+        app:layout_constraintMarginEnd="16dp"
+        app:layout_constraintMarginStart="16dp"
+        app:layout_constraintMarginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
