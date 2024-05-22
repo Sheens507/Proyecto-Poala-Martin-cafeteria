@@ -18,10 +18,12 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:layout_below="@id/username"
+        android:layout_margin="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="16dp"
         android:hint="Password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/login_button"

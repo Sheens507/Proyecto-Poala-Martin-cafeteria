@@ -15,6 +15,7 @@
         android:theme="@style/Theme.ProyectoProgressbar"
         tools:targetApi="31">
         <activity android:name=".Login"></activity>
+        <activity android:name=".SeleccionarComida"></activity>
         <activity android:name=".ECONOMICO"></activity>
 
         <activity
