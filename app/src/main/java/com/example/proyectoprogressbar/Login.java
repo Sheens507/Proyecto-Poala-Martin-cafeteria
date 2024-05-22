@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
                     // Login exitoso
                     Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     // Lanzar actividad Estudiante
-                    Intent intent = new Intent(Login.this, ECONOMICO.class);
+                    Intent intent = new Intent(Login.this, SeleccionarComida.class);
                     startActivity(intent);
                 } else {
                     // Login fallido

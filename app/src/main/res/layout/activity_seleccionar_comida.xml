@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeleccionarComida">
+
+    <Spinner
+        android:id="@+id/spinner_proteina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="76dp" />
+
+    <Spinner
+        android:id="@+id/spinner_acompanamiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_carbohidratos"
+        android:layout_marginTop="36dp" />
+
+    <Spinner
+        android:id="@+id/spinner_carbohidratos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_proteina"
+        android:layout_marginTop="36dp" />
+
+    <Spinner
+        android:id="@+id/spinner_bebida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_acompanamiento"
+        android:layout_marginTop="36dp"/>
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_bebida"
+        android:layout_marginTop="36dp"
+        android:text="Calculate Sum"/>
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_calculate"
+        android:layout_margin="16dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="16dp"
+        android:text="Total: "
+        android:textSize="18sp" />
+
+</RelativeLayout>
