@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222831"
+    android:background="#240A34"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="131dp"
         android:fontFamily="cursive"
         android:text="P"
-        android:textColor="#76ABAE"
+        android:textColor="#E9BD6C"
         android:textSize="96sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:text="M"
-        android:textColor="#76ABAE"
+        android:textColor="#E9BD6C"
         android:textSize="96sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="solutions "
-        android:textColor="#EEEEEE"
+        android:textColor="#891652"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
