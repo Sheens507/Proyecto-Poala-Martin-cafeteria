@@ -12,11 +12,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
+        android:fontFamily="casual"
         android:text="MENÚS"
         android:textAlignment="center"
         android:textColor="#E9BD6C"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
@@ -36,10 +36,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <Button
         android:id="@+id/agregar"
@@ -50,6 +50,7 @@
         android:textColorLink="#FF0000"
         android:backgroundTint="@color/Button"
         android:drawableLeft="@drawable/food"
+        android:drawableTint="@color/MoradoClaro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,28 +101,29 @@
         android:id="@+id/economico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Económico"
         android:backgroundTint="@color/Button"
+        android:text="Económico"
+        android:textColor="#FFEDD8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.147" />
 
     <Button
         android:id="@+id/ejecutivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/Button"
         android:text="Ejecutivo"
         android:textColor="#FFEDD8"
-        android:backgroundTint="@color/Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.147" />>
 
     <CheckBox
         android:id="@+id/arrozM"
@@ -216,17 +218,17 @@
 
     <Button
         android:id="@+id/personal"
-        android:layout_width="146dp"
-        android:layout_height="46dp"
-        android:text="Personalizado"
-        android:textColor="#FFEDD8"
+        android:layout_width="106dp"
+        android:layout_height="52dp"
         android:backgroundTint="@color/Button"
+        android:text="A tu Gusto"
+        android:textColor="#FFEDD8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <ImageView
         android:id="@+id/imageView3"

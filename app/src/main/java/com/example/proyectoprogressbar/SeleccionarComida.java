@@ -1,4 +1,4 @@
-// java/com/example/proyectoprogressbar/SeleccionarComida.java
+
 package com.example.proyectoprogressbar;
 
 import android.os.Bundle;
@@ -16,10 +16,10 @@ public class SeleccionarComida extends AppCompatActivity {
     private TextView textResult;
 
     // Arrays de ejemplo con sus respectivos valores, incluyendo la opción predeterminada
-    private String[] proteinas = {"-- Seleccionar", "Pollo - 100", "Carne - 150", "Pescado - 200"};
-    private String[] carbohidratos = {"-- Seleccionar", "Arroz - 50", "Pasta - 60", "Pan - 40"};
-    private String[] acompanamientos = {"-- Seleccionar", "Ensalada - 20", "Papas Fritas - 80", "Verduras - 30"};
-    private String[] bebidas = {"-- Seleccionar", "Agua - 0", "Jugo - 50", "Refresco - 70"};
+    private String[] proteinas = {"-- Seleccionar", "Pollo - 3.25", "Carne - 4.00", "Pescado - 5.00"};
+    private String[] carbohidratos = {"-- Seleccionar", "Arroz - 2.50", "Pasta - 3.00", "Pan - 1.25"};
+    private String[] acompanamientos = {"-- Seleccionar", "Ensalada - 2.00", "Papas Fritas - 2.75", "Verduras - 2.00"};
+    private String[] bebidas = {"-- Seleccionar", "Agua - 1", "Jugo - 1.50", "Refresco - 1.50"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class SeleccionarComida extends AppCompatActivity {
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int total = calculateTotal();
-                textResult.setText("Total: " + total);
+                float total = calculateTotal();
+                textResult.setText("Total: B/. " + total);
             }
         });
     }
@@ -54,8 +54,8 @@ public class SeleccionarComida extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
-    private int calculateTotal() {
-        int total = 0;
+    private float calculateTotal() {
+        float total = 0;
 
         total += getValueFromSelection(spinnerProteina);
         total += getValueFromSelection(spinnerCarbohidratos);
@@ -65,12 +65,12 @@ public class SeleccionarComida extends AppCompatActivity {
         return total;
     }
 
-    private int getValueFromSelection(Spinner spinner) {
+    private float getValueFromSelection(Spinner spinner) {
         String selectedItem = (String) spinner.getSelectedItem();
         if (selectedItem.equals("-- Seleccionar")) {
             return 0;
         }
         String[] parts = selectedItem.split(" - ");
-        return Integer.parseInt(parts[1]);
+        return Float.parseFloat(parts[1]);
     }
 }
