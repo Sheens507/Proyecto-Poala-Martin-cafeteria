@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class EJECUTIVO extends AppCompatActivity {
     private TextView tv3;
     private CheckBox c1, c2, c3;
-    private Button bttn, eco, eje, per;
+    private Button bttn, eco, eje, per, pagar;
     private float sum;
     private String resu = "";
 
@@ -29,6 +29,7 @@ public class EJECUTIVO extends AppCompatActivity {
         eco = findViewById(R.id.economico);
         eje = findViewById(R.id.ejecutivo);
         per = findViewById(R.id.personal);
+        pagar = findViewById(R.id.pagar);
 
         bttn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -66,6 +67,16 @@ public class EJECUTIVO extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EJECUTIVO.this, SeleccionarComida.class);
+                startActivity(intent);
+            }
+        });
+        pagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // aqui modificar
+                Intent intent = new Intent(EJECUTIVO.this, PasarelaPago.class);
+                intent.putExtra("SUMA_TOTAL", sum);
+                startActivity(intent);
                 startActivity(intent);
             }
         });
