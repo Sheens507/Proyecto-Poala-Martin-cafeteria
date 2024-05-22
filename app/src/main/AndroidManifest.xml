@@ -17,6 +17,7 @@
         <activity android:name=".Login"></activity>
         <activity android:name=".SeleccionarComida"></activity>
         <activity android:name=".ECONOMICO"></activity>
+        <activity android:name=".EJECUTIVO"></activity>
 
         <activity
             android:name=".MainActivity"
