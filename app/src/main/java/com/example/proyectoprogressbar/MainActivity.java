@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 //progressBar.setVisibility(ProgressBar.VISIBLE);
                 // Llamar a la clase HomeActivity usando un Intent
-                Intent intent = new Intent(MainActivity.this, HOME.class);
+                Intent intent = new Intent(MainActivity.this, Login.class);
                 startActivity(intent);
                 // Finalizar esta actividad para que no se pueda volver atrás a ella
                 finish();
