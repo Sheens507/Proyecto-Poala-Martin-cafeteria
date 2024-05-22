@@ -1,6 +1,7 @@
 
 package com.example.proyectoprogressbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,6 +15,9 @@ public class SeleccionarComida extends AppCompatActivity {
 
     private Spinner spinnerProteina, spinnerCarbohidratos, spinnerAcompanamiento, spinnerBebida;
     private TextView textResult;
+    private Button pagar;
+    private float sum;
+
 
     // Arrays de ejemplo con sus respectivos valores, incluyendo la opción predeterminada
     private String[] proteinas = {"-- Seleccionar", "Pollo - 3.25", "Carne - 4.00", "Pescado - 5.00"};
@@ -32,6 +36,7 @@ public class SeleccionarComida extends AppCompatActivity {
         spinnerBebida = findViewById(R.id.spinner_bebida);
         Button buttonCalculate = findViewById(R.id.button_calculate);
         textResult = findViewById(R.id.text_result);
+        pagar = findViewById(R.id.pagar);
 
         // Configurar adaptadores para los spinners
         setUpSpinner(spinnerProteina, proteinas);
@@ -44,6 +49,17 @@ public class SeleccionarComida extends AppCompatActivity {
             public void onClick(View v) {
                 float total = calculateTotal();
                 textResult.setText("Total: B/. " + total);
+            }
+        });
+
+        pagar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // aqui modificar
+                Intent intent = new Intent(SeleccionarComida.this, PasarelaPago.class);
+                intent.putExtra("SUMA_TOTAL", sum);
+                startActivity(intent);
+                startActivity(intent);
             }
         });
     }
@@ -73,4 +89,6 @@ public class SeleccionarComida extends AppCompatActivity {
         String[] parts = selectedItem.split(" - ");
         return Float.parseFloat(parts[1]);
     }
+
+
 }
