@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class EJECUTIVO extends AppCompatActivity {
     private TextView tv3;
     private CheckBox c1, c2, c3;
-    private Button bttn, eco, eje, personal;
+    private Button bttn, eco, eje, per;
     private float sum;
     private String resu = "";
 
@@ -28,7 +28,7 @@ public class EJECUTIVO extends AppCompatActivity {
         bttn = findViewById(R.id.agregar);
         eco = findViewById(R.id.economico);
         eje = findViewById(R.id.ejecutivo);
-        personal = findViewById(R.id.personal);
+        per = findViewById(R.id.personal);
 
         bttn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -59,6 +59,13 @@ public class EJECUTIVO extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EJECUTIVO.this, EJECUTIVO.class);
+                startActivity(intent);
+            }
+        });
+        per.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EJECUTIVO.this, SeleccionarComida.class);
                 startActivity(intent);
             }
         });

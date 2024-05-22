@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class ECONOMICO extends AppCompatActivity {
     private TextView tv3;
     private CheckBox ck1, ck2, ck3;
-    private Button btn, eco, eje;
+    private Button btn, eco, eje, per;
     private float sum;
     private String resu = "";
 
@@ -27,6 +27,7 @@ public class ECONOMICO extends AppCompatActivity {
         btn = findViewById(R.id.agregar);
         eco = findViewById(R.id.economico);
         eje = findViewById(R.id.ejecutivo);
+        per = findViewById(R.id.personal);
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -57,6 +58,13 @@ public class ECONOMICO extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ECONOMICO.this, EJECUTIVO.class);
+                startActivity(intent);
+            }
+        });
+        per.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ECONOMICO.this, SeleccionarComida.class);
                 startActivity(intent);
             }
         });
