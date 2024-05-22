@@ -14,11 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoProgressbar"
         tools:targetApi="31">
-        <activity android:name=".Login"></activity>
-        <activity android:name=".SeleccionarComida"></activity>
-        <activity android:name=".ECONOMICO"></activity>
-        <activity android:name=".EJECUTIVO"></activity>
-
+        <activity
+            android:name=".PasarelaPago"
+            android:exported="false" />
+        <activity android:name=".Login" />
+        <activity android:name=".SeleccionarComida" />
+        <activity android:name=".ECONOMICO" />
+        <activity android:name=".EJECUTIVO" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
