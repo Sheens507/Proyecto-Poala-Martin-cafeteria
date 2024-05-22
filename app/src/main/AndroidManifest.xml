@@ -15,6 +15,7 @@
         android:theme="@style/Theme.ProyectoProgressbar"
         tools:targetApi="31">
         <activity android:name=".Login"></activity>
+        <activity android:name=".Economico"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
